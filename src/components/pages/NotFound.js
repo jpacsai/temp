@@ -9,9 +9,12 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   container: {
-    margintTop: theme.spacing(10),
+    marginTop: theme.spacing(10),
+    display: 'flex',
+    flexDirection: 'column',
   },
   button: {
+    alignSelf: 'center',
     textTransform: 'none',
   },
 }));
@@ -20,11 +23,13 @@ const NotFound = () => {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="sx" className={classes.container}>
-      <Typography variant="h2">
+    <Container maxWidth="xs" className={classes.container}>
+      <Typography variant="h2" align="center">
         404
       </Typography>
-      <Typography variant="caption">PAGE NOT FOUND</Typography>
+      <Typography variant="body1" align="center">
+        PAGE NOT FOUND
+      </Typography>
       <Button
         className={classes.button}
         component={Link}
